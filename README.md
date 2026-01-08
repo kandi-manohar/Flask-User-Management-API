@@ -16,17 +16,15 @@ A full-stack web application built using Flask that allows users to be created a
 - Secure database access using Security Groups
 - Simple and clean UI with custom CSS theme
 
-## Architecture
-[ User Browser ]
-|
-| HTTP (Port 5000)
-v
-[ EC2 - Flask App ]
-|
-| MySQL (Port 3306)
-v
-[ RDS - MySQL ]
+## System Architecture
+The user accesses the application through a web browser. Requests are sent to a Flask application hosted on an AWS EC2 instance via HTTP on port **5000**.  
+The Flask backend securely communicates with an AWS RDS MySQL database over port **3306** using restricted Security Group rules.
 
+```mermaid
+graph TD
+    A[User Browser] -->|HTTP : 5000| B[EC2 - Flask App]
+    B -->|MySQL : 3306| C[RDS - MySQL]
+```
 
 ## Deployment
 - EC2 instance hosts Flask application
