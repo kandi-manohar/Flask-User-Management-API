@@ -18,13 +18,13 @@ A full-stack web application built using Flask that allows users to be created a
 
 ## Architecture
 [ User Browser ]
-        |
-        | HTTP (Port 5000)
-        v
+|
+| HTTP (Port 5000)
+v
 [ EC2 - Flask App ]
-        |
-        | MySQL (Port 3306)
-        v
+|
+| MySQL (Port 3306)
+v
 [ RDS - MySQL ]
 
 
